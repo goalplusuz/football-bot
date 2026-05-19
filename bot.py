@@ -128,8 +128,7 @@ def post_todays_matches():
     date_str = window_start.strftime("%d.%m.%Y")
     next_date_str = window_end.strftime("%d.%m")
     lines = [f"⚽ O'YINLAR JADVALI\n📅 {date_str} (12:00) — {next_date_str} (03:00) | Toshkent\n"]
-
-for f in filtered:
+    for f in filtered:
         league_id = f["league"]["id"]
         league_name = TOP_LEAGUES.get(league_id, f["league"]["name"])
         home = f["teams"]["home"]["name"]
